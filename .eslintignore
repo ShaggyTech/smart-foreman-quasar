@@ -1,7 +1,11 @@
 /dist
+/src-pwa
 /src-bex/www
 /src-capacitor
 /src-cordova
 /.quasar
 /node_modules
 /src-ssr
+wallaby.js
+babel.config.js
+jest-loader.js
