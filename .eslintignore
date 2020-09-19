@@ -9,3 +9,4 @@
 wallaby.js
 babel.config.js
 jest-loader.js
+.eslintrc.js
