@@ -2,15 +2,11 @@ const esModules = ['quasar/lang', 'lodash-es'].join('|');
 
 /* eslint-env node */
 module.exports = {
+  rootDir: '../../../',
   globals: {
     __DEV__: true
   },
-  setupFilesAfterEnv: ['<rootDir>/test/jest/jest.setup.ts'],
-  // noStackTrace: true,
-  // bail: true,
-  // cache: false,
-  // verbose: true,
-  // watch: true,
+  setupFilesAfterEnv: ['<rootDir>/test/jest/config/jest.setup.ts'],
   collectCoverage: true,
   coverageDirectory: '<rootDir>/test/jest/coverage',
   collectCoverageFrom: [
@@ -21,14 +17,6 @@ module.exports = {
     '<rootDir>/src/**/*.tsx'
   ],
   coveragePathIgnorePatterns: ['/node_modules/', '.d.ts$'],
-  coverageThreshold: {
-    global: {
-      //  branches: 50,
-      //  functions: 50,
-      //  lines: 50,
-      //  statements: 50
-    }
-  },
   testMatch: [
     // Matches tests in any subfolder of 'src' or into 'test/jest/__tests__'
     // Matches all files with extension 'js', 'jsx', 'ts' and 'tsx'

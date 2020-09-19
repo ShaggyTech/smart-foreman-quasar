@@ -12,12 +12,12 @@
     "start": "quasar serve ./dist/pwa",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"See package.json => scripts for available tests.\" && exit 0",
-    "test:unit": "jest --updateSnapshot",
-    "test:unit:coverage": "jest --coverage",
-    "test:unit:watch": "jest --watch",
-    "test:unit:watchAll": "jest --watchAll",
+    "test:unit": "jest -c ./test/jest/config/jest.config.js",
+    "test:unit:coverage": "jest --coverage -c ./test/jest/config/jest.config.js",
+    "test:unit:watch": "jest --watch -c ./test/jest/config/jest.config.js",
+    "test:unit:watchAll": "jest --watchAll -c ./test/jest/config/jest.config.js",
     "serve:test:coverage": "quasar serve test/jest/coverage/lcov-report/ --port 8788",
-    "concurrently:dev:jest": "concurrently \"quasar dev\" \"jest --watch\"",
+    "concurrently:dev:jest": "concurrently \"quasar dev\" \"yarn test:unit:watch\"",
     "test:unit:ui": "majestic"
   },
   "dependencies": {
