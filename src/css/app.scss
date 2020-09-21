@@ -1,1 +1,23 @@
 // app global css in SCSS form
+@font-face {
+  font-family: 'Sora';
+  src: url('./fonts/Sora-VariableFont500.woff2') format('woff2-variations');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url('./fonts/RobotoSlab-VariableFont500.woff2')
+    format('woff2-variations');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-family__Sora {
+  font-family: Sora;
+}
+
+.font-family__RobotoSlab {
+  font-family: RobotoSlab;
+}
