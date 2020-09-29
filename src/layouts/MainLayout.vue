@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh lpR fFr">
-    <q-header elevated>
+    <q-header elevated reveal :reveal-offset="50">
       <q-toolbar class="text-white fit row items-center justify-between">
         <div class="self-start q-my-auto">
           <q-btn
@@ -14,7 +14,11 @@
           <q-separator inset size="4px" vertical />
         </div>
         <q-toolbar-title class="column items-center justify-center q-mx-md">
-          <q-icon name="img:icons/smart-foreman-logo.svg" :size="iconSize"></q-icon>Smart Foreman
+          <q-icon
+            v-if="$q.screen.height > 400"
+            name="img:icons/smart-foreman-logo.svg"
+            :size="iconSize"
+          ></q-icon>Smart Foreman
         </q-toolbar-title>
         <div class="self-end q-my-auto">
           <q-btn
@@ -108,10 +112,7 @@ export default defineComponent({
   setup(_, { root: { $q } }) {
     const leftDrawerOpen: Ref<boolean> = ref(false);
     const essentialLinks = ref(linksData);
-    // const viewport: ComputedRef<ViewPort> = computed(() => ({
-    //   height: $q.screen.height || 0,
-    //   width: $q.screen.width || 0,
-    // }));
+
     const iconSize = computed(() => {
       let size = 48;
       if ($q.screen.height < 400) return `${36}px`;
