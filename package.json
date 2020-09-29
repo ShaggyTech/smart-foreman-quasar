@@ -7,9 +7,11 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
-    "build": "quasar build",
+    "build:spa": "quasar build",
     "build:pwa": "quasar build -m pwa",
-    "start": "quasar serve ./dist/pwa",
+    "build:ssr": "quasar build -m ssr",
+    "serve:pwa": "quasar serve ./dist/pwa",
+    "serve:ssr": "quasar serve ./dist/ssr",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"See package.json => scripts for available tests.\" && exit 0",
     "test:unit": "jest -c ./test/jest/config/jest.config.js",
