@@ -45,7 +45,7 @@
     "workbox-webpack-plugin": "5.1.4",
     "eslint-plugin-jest": "24.0.1",
     "wallaby-vue-compiler": "1.0.6",
-    "majestic": "1.7.0"
+    "majestic": "1.8.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
