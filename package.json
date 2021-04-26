@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@quasar/app": "2.1.0",
-    "@quasar/quasar-app-extension-testing-unit-jest": "2.0.0",
+    "@quasar/quasar-app-extension-testing-unit-jest": "2.2.2",
     "@types/node": "10.17.35",
     "@typescript-eslint/eslint-plugin": "4.1.1",
     "@typescript-eslint/parser": "4.1.1",
